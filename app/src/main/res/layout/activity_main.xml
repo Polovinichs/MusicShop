@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/yourName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/your_name"
+        android:inputType="textPersonName"
+        android:textStyle="normal" />
+
+    <ImageView
+        android:id="@+id/saleGuitar"
+        android:layout_width="wrap_content"
+        android:layout_height="98dp"
+        android:layout_below="@+id/yourName"
+        app:srcCompat="@drawable/guitar_sale"
+        android:contentDescription="@string/sale_guitar" />
+
+    <TextView
+        android:id="@+id/sale30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/yourName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="27dp"
+        android:fontFamily="@font/aclonica"
+        android:rotation="-30"
+        android:text="@string/sale_30"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/selectItems"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/saleGuitar"
+        android:layout_alignRight="@+id/saleGuitar"
+        android:layout_marginRight="38dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/select_items"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_alignEnd="@+id/saleGuitar" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/selectItems"
+        android:layout_alignRight="@+id/saleGuitar"
+        android:layout_alignEnd="@+id/saleGuitar" />
+
+    <ImageView
+        android:id="@+id/goodsImageView"
+        android:layout_below="@+id/spinner"
+        android:layout_centerHorizontal="true"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/guitar"
+        android:contentDescription="@string/guitar" />
+
+    <TextView
+        android:id="@+id/orderPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/goodsImageView"
+        android:layout_toLeftOf="@+id/goodsImageView"
+        android:layout_toStartOf="@+id/goodsImageView"
+        android:text="@string/order_price_n_0" />
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/orderPrice"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/_149" />
+
+    <TextView
+        android:id="@+id/quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/goodsImageView"
+        android:layout_toRightOf="@+id/goodsImageView"
+        android:layout_toEndOf="@+id/goodsImageView"
+        android:text="@string/quantity" />
+
+    <Button
+        android:id="@+id/buttonMinus"
+        android:onClick="minusQuantity"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:layout_below="@+id/quantity"
+        android:layout_toLeftOf="@+id/quantity"
+        android:layout_toStartOf="@+id/quantity"
+        android:text="@string/minus" />
+
+    <Button
+        android:id="@+id/buttonPlus"
+        android:onClick="plusQuantity"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:layout_below="@+id/quantity"
+        android:layout_toRightOf="@id/quantity"
+        android:layout_toEndOf="@+id/quantity"
+        android:text="@string/plus" />
+
+    <TextView
+        android:id="@+id/quantity0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/quantity"
+        android:layout_toRightOf="@+id/buttonMinus"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/_1"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/cart"
+        android:onClick="cart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_below="@+id/buttonPlus"
+        android:layout_marginTop="50dp"
+        android:text="@string/add_to_cart" />
+
+</RelativeLayout>
